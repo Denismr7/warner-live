@@ -48,6 +48,12 @@ main {
     @include flex(column);
     .section-title {
         margin-bottom: 15px;
+        #top-text {
+            &::after {
+                content: "5";
+                font-weight: bold;
+            }
+        }
     }
     .top {
         @include flex(row-reverse);
@@ -66,9 +72,56 @@ main {
         }
     }
     .first {
-        @include displayShowsDesktop();
+        @media screen and (min-width: 1281px) {
+            @include displayShowsDesktop();
+        }
     }
     .second {
-        @include displayShowsDesktop();
+        @media screen and (min-width: 1401px) {
+            @include displayShowsDesktop();
+        }
+    }
+}
+@media screen and (max-width: 1400px) {
+    header {
+        .platform-title {
+            display: none;
+        }
+    }
+    main {
+        .section-title {
+            #top-text::after {
+                content: "3";
+            }
+        }
+        @for $i from 4 through 5 {
+            #top#{$i} {
+                display: none;
+            }
+        }
+        .first {
+            @include displayShowsTablet();
+        }
+        .second {
+            @include displayShowsTablet();
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+    main {
+        .section-title {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .top {
+            @include flex(column-reverse);
+        }
+        .first {
+            @include flex(column);
+        }
+        .second {
+            @include flex(column);
+        }
     }
 }

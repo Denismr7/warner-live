@@ -24,3 +24,17 @@
         }
 }
 }
+@mixin displayShowsTablet() {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr;
+    .item {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .item5, .item6 {
+        grid-column: span 2;
+    }
+}
