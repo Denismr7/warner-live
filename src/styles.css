@@ -62,8 +62,17 @@ header .header-buttons {
 }
 
 header .header-buttons * {
-  padding: 0 10px;
+  padding: 7px 15px;
   font-size: 1rem;
+  margin-right: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+header .header-buttons *:hover {
+  background-color: #a70000;
+  border-radius: 5px;
 }
 
 main {
@@ -74,6 +83,10 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main .section-title {
+  margin-bottom: 15px;
 }
 
 main .top {
@@ -89,6 +102,21 @@ main .top {
           justify-content: space-between;
 }
 
+main .top .top-item {
+  width: 100%;
+}
+
+main .top .top-item img {
+  width: 98%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+main .top .top-item img:hover {
+  width: 100%;
+}
+
 main .first {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,29 +125,29 @@ main .first {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin: 0;
 }
 
 main .first .item {
   z-index: 1;
+  width: 80%;
+  margin: 0 1px 20px 1px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 main .first .item img {
-  width: 99%;
+  width: 100%;
   height: auto;
 }
 
 main .first .item:hover {
-  z-index: 10;
+  position: relative;
+  bottom: 10px;
+  width: 90%;
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.35);
   cursor: pointer;
-}
-
-main .first .item:hover img {
-  width: 110%;
-  height: auto;
 }
 
 main .second {
@@ -130,28 +158,28 @@ main .second {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin: 0;
 }
 
 main .second .item {
   z-index: 1;
+  width: 80%;
+  margin: 0 1px 20px 1px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 main .second .item img {
-  width: 99%;
+  width: 100%;
   height: auto;
 }
 
 main .second .item:hover {
-  z-index: 10;
+  position: relative;
+  bottom: 10px;
+  width: 90%;
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.35);
   cursor: pointer;
-}
-
-main .second .item:hover img {
-  width: 110%;
-  height: auto;
 }
 /*# sourceMappingURL=styles.css.map */

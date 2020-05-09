@@ -1,27 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap');
-@mixin flex($direction) {
-    display: flex;
-    flex-direction: $direction;
-}
-@mixin displayShows {
-    width: 100%;
-    justify-content: space-evenly;
-    .item {
-        z-index: 1;
-        img {
-            width: 99%;
-            height: auto;
-        }
-        &:hover {
-            img {
-                width: 110%;
-                height: auto;
-            }
-            z-index: 10;
-            cursor: pointer;
-        }
-}
-}
+@import './mixin';
+
 body {
     background-color: #141414;
     font-family: 'Jost', sans-serif;
@@ -53,23 +32,43 @@ header {
         @include flex(row);
         margin-right: 25px;
         * {
-            padding: 0 10px;
+            padding: 7px 15px;
             font-size: 1rem;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            &:hover {
+                background-color: rgb(167, 0, 0);
+                border-radius: 5px;
+            }
         }
     }
 }   
 main {
     @include flex(column);
+    .section-title {
+        margin-bottom: 15px;
+    }
     .top {
         @include flex(row-reverse);
         justify-content: space-between;
+        .top-item {
+            width: 100%;
+            img {
+                width: 98%;
+                transition: all 0.2s ease;
+                cursor: pointer;
+                &:hover {
+                    width: 100%;
+                }
+
+            }
+        }
     }
     .first {
-            @include flex(row);
-            @include displayShows();
+        @include displayShowsDesktop();
     }
     .second {
-        @include flex(row);
-        @include displayShows();
+        @include displayShowsDesktop();
     }
 }
